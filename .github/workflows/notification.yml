@@ -1,0 +1,25 @@
+name: pass the variable 
+
+on:
+  workflow_dispatch
+
+env:
+  DAY_OF_WEEK: Monday
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Meena it's Monday"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Meena
+
+- name: Send a Notification
+          id: notify
+          uses: thechetantalwar/teams-notify@v2
+          with:
+          teams_webhook_url: ${{ secrets.TEAM_HOOK }}
+          message: "Github Action Build Number ${{ github.run_number }} Completed for ${{ github.repository }} and the outcome is  ${{ needs.build.result }}."
