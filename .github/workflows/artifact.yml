@@ -1,5 +1,4 @@
 name: Publish GitHub Actions Artifacts Example
-
 on:
   push:
     branches: [ main ]
