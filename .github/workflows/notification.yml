@@ -1,4 +1,4 @@
-name: pass the variable 
+name: notification
 on:
   workflow_dispatch: {}
   
