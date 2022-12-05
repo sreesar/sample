@@ -1,6 +1,6 @@
 name: A_repo
 on:
-  workflow_dispatch:
+  repository_dispatch:
      inputs:
       workflow_02:
         description: 'ًresusable-workflow-caller which will be triggered'
