@@ -1,5 +1,5 @@
 name: create matrix or multiple time run the job 
-on:
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
