@@ -13,6 +13,6 @@ jobs:
       - run: bats -v
       - name: Retrieve secret
         env:
-          super_secret: ${{ secrets.SUPERSECRET }}
+          super_secret: ${{ secrets.ACTIONSKEY }}
         run: |
           example-command "$super_secret"
