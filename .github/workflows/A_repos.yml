@@ -1,9 +1,8 @@
 name: A_repo
 on:
 
-  repository_dispatch:
-   type: run-ping
-   inputs:
+  workflow_dispatch:
+    inputs:
       workflow_02:
         description: 'ًresusable-workflow-caller which will be triggered'
         required: true
